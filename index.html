@@ -2,6 +2,23 @@
 <html>
 <head>
   <title> not a failure </title>
+<script>
+  const sections = document.querySelectorAll('section');
+  const windowHeight = window.innerHeight;
+
+  function scroll() {
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if (sectionTop < windowHeight * 0.75) {
+        section.classList.add('active');
+      } else {
+        section.classList.remove('active');
+      }
+    })
+  }
+
+  window.addEventListener('scroll', scroll);
+</script>
 <style>
   .title {
     text-align: left;
@@ -51,23 +68,7 @@
   <section id="section3">
     <!-- content of section 3 -->
 </section>
-<script>
-  const sections = document.querySelectorAll('section');
-const windowHeight = window.innerHeight;
 
-function scroll() {
-  sections.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
-    if (sectionTop < windowHeight * 0.75) {
-      section.classList.add('active');
-    } else {
-      section.classList.remove('active');
-    }
-  })
-}
-
-window.addEventListener('scroll', scroll);
-</script>
 <img src="code-image.jpg" alt="code" class="code-image">
   
 <div class="title">
