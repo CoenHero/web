@@ -17,6 +17,27 @@
     width: 570px;
     height: auto;
   }
+  .slide {
+  width: 100vw;
+  height: 100vh;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 400vw;
+  }
+  .one {
+    background: #efdefe;
+  }
+  .two {
+    background: #a3f3d3;
+  }
+  .three {
+    background: #0bbaa0;
+  }
+  .four {
+    background: #00dfdf;
+  }
   body {
     background-color: black; 
   } 
@@ -27,6 +48,15 @@
 </head>
 <body>
 
+<div class="outer-wrapper">
+  <div class="wrapper">
+    <div class="slide one"></div>
+    <div class="slide two"></div>
+    <div class="slide three"></div>
+    <div class="slide four"></div>
+  </div>
+</div>
+  
 <img src="code-image.jpg" alt="code" class="code-image">
   
 <div class="title">
